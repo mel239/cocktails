@@ -1,0 +1,30 @@
+
+@font-face {
+	font-family: 'FlagoriaCalinthaExtraBold';
+	src: local(FlagoriaCalinthaExtraBold),url(fonts/FlagoriaCalintha-ExtraBold.ttf) format('truetype');
+}
+
+*{
+	font-family: FlagoriaCalinthaExtraBold !important;
+}
+.bg-animation {
+	background: linear-gradient(135deg, #f77d44,#34685c, #ef7401, #d51e0b);
+	background-size: 500% 500%;
+	animation: gradient 10s ease infinite;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

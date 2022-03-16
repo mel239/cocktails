@@ -1,12 +1,10 @@
-
+import { API_URL} from './config';
 
 export default async function getCocktails(keyword) {
-	const apiURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${keyword}`;
 
-	return (fetch(apiURL)
-		.then(res => res.json())
-		.then(res => res.drinks)
-         || [])
-
+	return (
+		fetch(API_URL+keyword)
+			.then(res => res.json())
+			.then(res => res.drinks) || []
+	);
 }
-
