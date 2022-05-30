@@ -8,13 +8,12 @@ export default function CocktailButton({ children, keyword, name }) {
 		<Link key={keyword} to={`/${children}/${keyword}`}>
 			<Center
 				borderRadius='15'
-				mt={100}
-				bg='#d51e0b'
+				mt={'2rem'}
 				h='40px'
 				w={200}
-				color='white'
+				color='#d51e0b'
 				className='button'
-				_hover={{ shadow: '3px 3px #d51e0b', bg: '#ef7401',cursor:'pointer'}}>
+				_hover={{ color: '#ef7401',cursor:'pointer'}}>
 			<Text fontSize='3xl'>{name}</Text>
 			</Center>
 		</Link>

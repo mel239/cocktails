@@ -50,48 +50,51 @@ export default function Cocktail({ cocktail }) {
 					</Heading>
 					<Stack direction={'row'} align={'center'}>
 						<List spacing={5}>
+
+						
+													
 							<ListItem>
 								{cocktail.strIngredient1 && (
 									<Button
-										ml={3}
+										m={1.5}
 										onClick={e => searchIngredient(cocktail.strIngredient1)}
-										size='xs'
+										size='sm'
 										colorScheme='teal'>
 										{cocktail.strIngredient1}
 									</Button>
 								)}
 								{cocktail.strIngredient2 && (
 									<Button
-										ml={3}
+										m={1.5}
 										onClick={e => searchIngredient(cocktail.strIngredient2)}
-										size='xs'
+										size='sm'
 										colorScheme='teal'>
 										{cocktail.strIngredient2}
 									</Button>
 								)}
 								{cocktail.strIngredient3 && (
 									<Button
-										ml={3}
+										m={1.5}
 										onClick={e => searchIngredient(cocktail.strIngredient3)}
-										size='xs'
+										size='sm'
 										colorScheme='teal'>
 										{cocktail.strIngredient3}
 									</Button>
 								)}
 								{cocktail.strIngredient4 && (
 									<Button
-										ml={3}
+										m={1.5}
 										onClick={e => searchIngredient(cocktail.strIngredient4)}
-										size='xs'
+										size='sm'
 										colorScheme='teal'>
 										{cocktail.strIngredient4}
 									</Button>
 								)}
 								{cocktail.strIngredient5 && (
 									<Button
-										ml={3}
+										m={1.5}
 										onClick={e => searchIngredient(cocktail.strIngredient5)}
-										size='xs'
+										size='sm'
 										colorScheme='teal'>
 										{cocktail.strIngredient5}
 									</Button>
