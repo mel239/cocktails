@@ -19,7 +19,7 @@ export default function Cocktail({ cocktail }) {
 				flexDir='column'
 				role={'group'}
 				p={6}
-				maxW={'330px'}
+				maxW={{base:'330px',md:'600px'}}
 				w={'full'}
 				bg={useColorModeValue('white', '#f77d44')}
 				boxShadow={'2xl'}
@@ -40,33 +40,35 @@ export default function Cocktail({ cocktail }) {
 						align='center'
 						fontFamily={'body'}
 						textTransform={'uppercase'}
-						fontWeight={500} as='h1'>
+						fontWeight={500}
+						as='h1'>
 						{cocktail.strDrink}
 					</Heading>
 					<Flex wrap='wrap' align='center' justify='center'>
 						{cocktail.strIngredient1 && (
 							<IngredientLink ingredient={cocktail.strIngredient1} />
 						)}
-							{cocktail.strIngredient2&& (
+						{cocktail.strIngredient2 && (
 							<IngredientLink ingredient={cocktail.strIngredient2} />
 						)}
-							{cocktail.strIngredient3 && (
+						{cocktail.strIngredient3 && (
 							<IngredientLink ingredient={cocktail.strIngredient3} />
 						)}
-							{cocktail.strIngredient4&& (
+						{cocktail.strIngredient4 && (
 							<IngredientLink ingredient={cocktail.strIngredient4} />
 						)}
-							{cocktail.strIngredient5 && (
+						{cocktail.strIngredient5 && (
 							<IngredientLink ingredient={cocktail.strIngredient5} />
 						)}
-							{cocktail.strIngredient6 && (
+						{cocktail.strIngredient6 && (
 							<IngredientLink ingredient={cocktail.strIngredient6} />
 						)}
-						
 					</Flex>
 				</Stack>
 
-				<Text fontSize='lg'align='center' border='1px' mt='1rem' p='0.25rem'>{cocktail.strInstructions}</Text>
+				<Text fontSize='lg' align='center' border='1px' mt='1rem' p='0.25rem'>
+					{cocktail.strInstructions}
+				</Text>
 			</Center>
 		</Center>
 	);
