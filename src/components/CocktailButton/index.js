@@ -13,7 +13,7 @@ export default function CocktailButton({ children, keyword, name }) {
 				color='#d51e0b'
 				className='button'
 				_hover={{ bgGradient:'linear(to-r,#34685c,#ef7401,#d51e0b)',bgClip:'text',cursor:'pointer'}}>
-			<Text space='1rem'fontSize='3xl'>{name}</Text>
+			<Text fontSize='3xl'>{name}</Text>
 			</Center>
 		</Link>
 	);

@@ -19,7 +19,6 @@ export default function ListOfCocktails({ cocktails }) {
 
 						<Image
 							boxShadow='lg'
-							rounded={'lg'}
 							objectFit={'cover'}
 							src={`${cocktail.strDrinkThumb}/preview`}
 							alt={cocktail.strDrink}></Image>
