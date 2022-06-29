@@ -10,7 +10,7 @@ h1{
 }
 
 .bg-animation {
-	background: linear-gradient(135deg, #f77d44,#34685c, #ef7401, #d51e0b);
+	background: linear-gradient(135deg, #f77d44,#d51e0b,#ef7401);
 	background-size: 500% 500%;
 	animation: gradient 8s ease infinite;
 	background-clip: text;

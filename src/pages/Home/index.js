@@ -22,11 +22,11 @@ export default function Home() {
 				<Image src={'cocktail.png'} objectFit={'cover'} mt='3.5rem' p='1rem' />
 			</Flex>
 			<Flex mt={10} flex={1} align={'center'} justify={'center'}>
-				<Stack w={'full'} mt='3.5rem'>
+				<Stack w={'full'}>
 					<Heading className='bg-animation' as='h1' size='4xl' align='center'>
 						DON'T LOSE YOUR HEAD, USE IT!
 					</Heading>
-					<Text align='center' fontSize='2xl' color='#34685c'>
+					<Text align='center' fontSize='3xl' color='#34685c'>
 						An easy Cocktails recipe guide
 					</Text>
 					<Stack
@@ -41,12 +41,12 @@ export default function Home() {
 									<Heading as='h3' size='lg' color='#34685c'>
 										Pick your{' '}
 										<Text
-											bgGradient='linear(to-r,#34685c,#ef7401,#d51e0b)'
+											bgGradient='linear(to-r,#d51e0b,#ef7401)'
 											bgClip='text'
 											display='inline'
 											as='h1'
 											>
-											Poison
+											POISON
 										</Text>
 									</Heading>
 									<AccordionIcon />
