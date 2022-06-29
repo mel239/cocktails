@@ -4,9 +4,11 @@
 	src: local(FlagoriaCalinthaExtraBold),url(fonts/FlagoriaCalintha-ExtraBold.ttf) format('truetype');
 }
 
-*{
+h1{
 	font-family: FlagoriaCalinthaExtraBold !important;
+	letter-spacing: 0.20rem;
 }
+
 .bg-animation {
 	background: linear-gradient(135deg, #f77d44,#34685c, #ef7401, #d51e0b);
 	background-size: 500% 500%;

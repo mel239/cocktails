@@ -18,15 +18,15 @@ import {
 export default function Home() {
 	return (
 		<Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-			<Flex flex={1}>
-				<Image src={'cocktail.png'} objectFit={'contain'} mt={12} p={5} />
+			<Flex flex={2} >
+				<Image src={'cocktail.png'} objectFit={'cover'} mt='3.5rem' p='1rem' />
 			</Flex>
-			<Flex p={10} mt={10} flex={1} align={'center'} justify={'center'}>
-				<Stack w={'full'} maxW={'lg'}>
+			<Flex mt={10} flex={1} align={'center'} justify={'center'}>
+				<Stack w={'full'} mt='3.5rem'>
 					<Heading className='bg-animation' as='h1' size='4xl' align='center'>
 						DON'T LOSE YOUR HEAD, USE IT!
 					</Heading>
-					<Text align='center' fontSize='xl' color='#34685c'>
+					<Text align='center' fontSize='2xl' color='#34685c'>
 						An easy Cocktails recipe guide
 					</Text>
 					<Stack
@@ -43,7 +43,9 @@ export default function Home() {
 										<Text
 											bgGradient='linear(to-r,#34685c,#ef7401,#d51e0b)'
 											bgClip='text'
-											display='inline'>
+											display='inline'
+											as='h1'
+											>
 											Poison
 										</Text>
 									</Heading>
