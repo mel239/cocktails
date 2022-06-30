@@ -5,7 +5,7 @@ import { SimpleGrid, Heading, Center, Image } from '@chakra-ui/react';
 
 export default function ListOfCocktails({ cocktails }) {
 	return (
-		<SimpleGrid columns={[2, null, 4]} spacing={5} p={5} mt={10}>
+		<SimpleGrid columns={[2, null, 4]} spacing={8} p={5} mt={10}>
 			{cocktails.map(cocktail => (
 				<Center
 					loading='lazy'
@@ -13,7 +13,16 @@ export default function ListOfCocktails({ cocktails }) {
 					display='flex'
 					alignItems='baseline'>
 					<Link to={`/cocktail/${cocktail.idDrink}`}>
-						<Heading color='#34685c' as='h2' size='md' textAlign='center'>
+						<Heading
+							color='white'
+							size='sm'
+							bg='rgba(0,0,0,0.5)'
+							p='0.15rem'
+							textAlign='center'
+							mt='5px'
+							pos={'absolute'}
+							w='6rem'
+							>
 							{cocktail.strDrink}
 						</Heading>
 

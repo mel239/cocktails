@@ -94,7 +94,7 @@ export default function Cocktail({ cocktail }) {
 					<Text mt='1rem'>{cocktail.strInstructions}</Text>
 				</Text>
 				<Flex wrap='wrap' align='center' justify='center' mt='1.5rem'>
-					Look for more cocktails with:
+					See more cocktails with:
 					{cocktail.strIngredient1 && (
 						<IngredientLink ingredient={cocktail.strIngredient1} />
 					)}
