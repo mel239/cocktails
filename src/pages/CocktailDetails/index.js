@@ -12,7 +12,7 @@ export default function CocktailDetails({ params }) {
 	return (
 		<div>
 			{loading
-				? <Spinner size='xl' />
+				? <Spinner color='red.500'thickness='5px'size='xl' />
 				: cocktails.map(cocktail => <Cocktail cocktail={cocktail} key={cocktail.idDrink}/>)}
 		</div>
 	);

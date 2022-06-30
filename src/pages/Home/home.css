@@ -6,13 +6,18 @@
 
 h1{
 	font-family: FlagoriaCalinthaExtraBold !important;
-	letter-spacing: 0.20rem;
+	letter-spacing: 0.25rem;
+}
+
+h3{
+	letter-spacing: 0.25rem;
+	font-family: FlagoriaCalinthaExtraBold !important;
 }
 
 .bg-animation {
-	background: linear-gradient(135deg, #f77d44,#d51e0b,#ef7401);
+	background: linear-gradient(110deg, #f77d44,#f62a13,#ffc400);
 	background-size: 500% 500%;
-	animation: gradient 8s ease infinite;
+	animation: gradient 5s ease infinite;
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;

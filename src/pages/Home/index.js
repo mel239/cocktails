@@ -26,8 +26,8 @@ export default function Home() {
 					<Heading className='bg-animation' as='h1' size='4xl' align='center'>
 						DON'T LOSE YOUR HEAD, USE IT!
 					</Heading>
-					<Text align='center' fontSize='3xl' color='#34685c'>
-						An easy Cocktails recipe guide
+					<Text align='center' fontSize='2xl' color='#34685c' borderTop='1px' borderBottom='1px'>
+						An easy guide to Cocktails
 					</Text>
 					<Stack
 						direcction={{ base: 'column', md: 'row' }}
@@ -38,13 +38,12 @@ export default function Home() {
 						<Accordion allowMultiple>
 							<AccordionItem>
 								<AccordionButton>
-									<Heading as='h3' size='lg' color='#34685c'>
+									<Heading size='lg' color='#34685c'>
 										Pick your{' '}
 										<Text
 											bgGradient='linear(to-r,#d51e0b,#ef7401)'
 											bgClip='text'
-											display='inline'
-											as='h1'
+											display='inline'								
 											>
 											POISON
 										</Text>

@@ -16,7 +16,7 @@ export default function CocktailSearch({ params }) {
 			<Heading pt={20} fontSize={'3xl'} fontFamily={'body'} align='center'>
 				 {decodeURI(keyword)}
 			</Heading>
-			{loading ? <Spinner size='xl' /> : <ListOfCocktails cocktails={cocktails} />}
+			{loading ? <Spinner color='red.500'thickness='5px' size='xl' /> : <ListOfCocktails cocktails={cocktails} />}
 		</>
 	);
 }

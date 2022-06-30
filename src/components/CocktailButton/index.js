@@ -7,7 +7,7 @@ export default function CocktailButton({ children, keyword, name }) {
 	return (
 		<Link key={keyword} to={`/${children}/${keyword}`}>
 			<Center
-				as='h1'
+				as='h3'
 				h='40px'
 				w='300px'
 				color='#d51e0b'

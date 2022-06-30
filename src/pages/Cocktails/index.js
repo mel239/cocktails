@@ -16,7 +16,7 @@ export default function Cocktails({ params }) {
 			<Heading pt={20} fontSize={'3xl'} as='h1' fontFamily={'body'} align='center'>
 				Cocktails with {decodeURI(keyword)}
 			</Heading>
-			{loading ? <Spinner size='xl' /> : <ListOfCocktails cocktails={cocktails} />}
+			{loading ? <Spinner color='red.500'thickness='5px' size='xl' /> : <ListOfCocktails cocktails={cocktails} />}
 		</>
 	);
 }
