@@ -4,15 +4,16 @@ import { Center,Text } from '@chakra-ui/react';
 
 
 export default function CocktailButton({ children, keyword, name }) {
+	console.log(keyword)
 	return (
 		<Link key={keyword} to={`/${children}/${keyword}`}>
 			<Center
 				as='h3'
 				h='40px'
-				w='300px'
+				w='250px'
 				color='#d51e0b'
 				className='button'
-				_hover={{ bgGradient:'linear(to-r,#ef7401,#d51e0b)',bgClip:'text',cursor:'pointer'}}>
+				_hover={{cursor:'pointer',color:'orange'}}>
 			<Text fontSize='3xl'>{name}</Text>
 			</Center>
 		</Link>

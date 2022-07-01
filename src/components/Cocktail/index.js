@@ -55,42 +55,42 @@ export default function Cocktail({ cocktail }) {
 					borderTop='1px'
 					mt='1rem'
 					p='0.5rem'>
-					{cocktail.strMeasure1 && (
+					{cocktail.strIngredient1 && (
 						<ListItem>
 							▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
 						</ListItem>
 					)}
-					{cocktail.strMeasure2 && (
+					{cocktail.strIngredient2 && (
 						<ListItem>
 							▪ {cocktail.strMeasure2} {cocktail.strIngredient2}
 						</ListItem>
 					)}
-					{cocktail.strMeasure3 && (
+					{cocktail.strIngredient3 && (
 						<ListItem>
 							▪ {cocktail.strMeasure3} {cocktail.strIngredient3}
 						</ListItem>
 					)}
-					{cocktail.strMeasure4 && (
+					{cocktail.strIngredient4 && (
 						<ListItem>
 							▪ {cocktail.strMeasure4} {cocktail.strIngredient4}
 						</ListItem>
 					)}
-					{cocktail.strMeasure5 && (
+					{cocktail.strIngredient5 && (
 						<ListItem>
 							▪ {cocktail.strMeasure1} {cocktail.strIngredient5}
 						</ListItem>
 					)}
-					{cocktail.strMeasure6 && (
+					{cocktail.strIngredient6 && (
 						<ListItem>
 							▪ {cocktail.strMeasure6} {cocktail.strIngredient6}
 						</ListItem>
 					)}
-					{cocktail.strMeasure7 && (
+					{cocktail.strIngredient7 && (
 						<ListItem>
 							▪ {cocktail.strMeasure7} {cocktail.strIngredient7}
 						</ListItem>
 					)}
-					{cocktail.strMeasure8 && (
+					{cocktail.strIngredient8 && (
 						<ListItem>
 							▪ {cocktail.strMeasure8} {cocktail.strIngredient8}
 						</ListItem>
@@ -98,7 +98,7 @@ export default function Cocktail({ cocktail }) {
 				</List>
 				<Text mt='1rem'>{cocktail.strInstructions}</Text>
 
-				<Flex wrap='wrap' align='center' justify='center' mt='1.5rem'>
+				<Flex wrap='wrap' align='center' justify='center' mt='1.5rem' borderTop='1px'>
 					See more cocktails with:
 					{cocktail.strIngredient1 && (
 						<IngredientLink ingredient={cocktail.strIngredient1} />

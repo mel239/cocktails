@@ -6,5 +6,7 @@ export const API_COCKTAIL_ID = 'lookup.php?i=';
 
 export const API_SEARCH = 'search.php?s=';
 
+export const API_FILTER_BY_CATEGORY = 'filter.php?c=';
+
 
 

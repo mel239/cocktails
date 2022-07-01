@@ -9,10 +9,9 @@ export default function CocktailForm() {
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		if(cocktail!== ""){
+		if (cocktail !== '') {
 			pushLocation(`/search/${cocktail}`);
 		}
-		
 	};
 	const handleChange = event => {
 		setCocktail(event.target.value);

@@ -1,8 +1,8 @@
 import React from 'react';
 import CocktailForm from 'components/CocktailForm';
+import Sidebar from 'components/Sidebar';
 import { HStack, IconButton, useColorMode } from '@chakra-ui/react';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { Link } from 'wouter';
 
 export default function Header() {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -14,15 +14,15 @@ export default function Header() {
 			w={'100%'}
 			spacing={'1rem'}
 			justify='space-between'>
-			<Link to={`/`}>
-				{' '}
-				<img src={'logo.png'} alt={'logo'} />
-			</Link>
-			<CocktailForm />
+				<Sidebar/>
+
+			<CocktailForm/>
+			
 			<IconButton
 				icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
 				isRound='true'
 				size='lg'
+				colorScheme='red'
 				onClick={toggleColorMode}
 			/>
 		</HStack>
