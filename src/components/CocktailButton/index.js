@@ -4,7 +4,6 @@ import { Center,Text } from '@chakra-ui/react';
 
 
 export default function CocktailButton({ children, keyword, name }) {
-	console.log(keyword)
 	return (
 		<Link key={keyword} to={`/${children}/${keyword}`}>
 			<Center

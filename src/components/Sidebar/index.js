@@ -3,6 +3,7 @@ import {
 	Flex,
 	Image,
 	Drawer,
+	DrawerHeader,
 	DrawerBody,
 	DrawerOverlay,
 	DrawerContent,
@@ -37,7 +38,8 @@ export default function Sidebar() {
 				finalFocusRef={btnRef}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerCloseButton />
+					<DrawerHeader>Login|Register</DrawerHeader>
+					<DrawerCloseButton colorScheme='red' />
 
 					<DrawerBody mt='3rem'>
 						<Flex direction='column'>
