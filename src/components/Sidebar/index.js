@@ -7,7 +7,6 @@ import {
 	DrawerBody,
 	DrawerOverlay,
 	DrawerContent,
-	DrawerCloseButton,
 	Button,
 	useDisclosure,
 	Menu,
@@ -19,6 +18,8 @@ import CocktailButton from 'components/CocktailButton';
 import { Link } from 'wouter';
 import { FaAngleDown } from 'react-icons/fa';
 
+import logo from 'assets/logo.png';
+
 export default function Sidebar() {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = React.useRef();
@@ -27,7 +28,7 @@ export default function Sidebar() {
 			<Image
 				ref={btnRef}
 				onClick={onOpen}
-				src={'logo.png'}
+				src={logo}
 				alt={'logo'}
 				cursor='pointer'
 			/>
@@ -38,11 +39,19 @@ export default function Sidebar() {
 				finalFocusRef={btnRef}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerHeader>Login|Register</DrawerHeader>
-					<DrawerCloseButton colorScheme='red' />
-
-					<DrawerBody mt='3rem'>
-						<Flex direction='column'>
+					<DrawerHeader >
+					<Flex justify="center">
+					<Image
+							onClick={onClose}
+							src={logo}
+							alt={'logo'}
+							cursor='pointer'
+						/>
+					</Flex>
+					</DrawerHeader>
+				
+					<DrawerBody mt='1rem'>
+						<Flex direction='column' gap='1rem'>
 							<Link to={`/`}>
 								{' '}
 								<Button w='100%' onClick={onClose} colorScheme='red'>
@@ -50,12 +59,11 @@ export default function Sidebar() {
 								</Button>
 							</Link>
 
-							<Menu>
+							<Menu matchWidth='true'>
 								<MenuButton
 									as={Button}
 									colorScheme='red'
-									rightIcon={<FaAngleDown />}
-									mt='1rem'>
+									rightIcon={<FaAngleDown />}>
 									Categories
 								</MenuButton>
 								<MenuList colorScheme='red'>
@@ -93,6 +101,13 @@ export default function Sidebar() {
 									</MenuItem>
 								</MenuList>
 							</Menu>
+
+							<Link to={`/`}>
+								{' '}
+								<Button w='100%' onClick={onClose} colorScheme='red'>
+									Favorites
+								</Button>
+							</Link>
 						</Flex>
 					</DrawerBody>
 				</DrawerContent>

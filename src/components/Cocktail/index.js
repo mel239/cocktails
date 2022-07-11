@@ -10,6 +10,10 @@ import {
 	List,
 	ListItem,
 } from '@chakra-ui/react';
+
+import linedeco from 'assets/line-deco.png';
+
+
 import IngredientLink from 'components/IngredientLink';
 
 export default function Cocktail({ cocktail }) {
@@ -48,13 +52,11 @@ export default function Cocktail({ cocktail }) {
 					</Heading>
 				</Stack>
 
-				<List
-					align='center'
-					borderBottom='1px'
-					fontSize='lg'
-					borderTop='1px'
-					mt='1rem'
-					p='0.5rem'>
+				<Flex justify='center'>
+					<Image src={linedeco} objectFit={'contain'}/>
+				</Flex>
+
+				<List align='left' p='0.5rem' borderBottom='1px'>
 					{cocktail.strIngredient1 && (
 						<ListItem>
 							▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
@@ -96,9 +98,10 @@ export default function Cocktail({ cocktail }) {
 						</ListItem>
 					)}
 				</List>
-				<Text mt='1rem'>{cocktail.strInstructions}</Text>
-
-				<Flex wrap='wrap' align='center' justify='center' mt='1.5rem' borderTop='1px'>
+				
+				<Text align='center' p='0.5rem' borderBottom='1px'>{cocktail.strInstructions}</Text>
+			
+				<Flex wrap='wrap' align='center' justify='center' mt='0.5rem'>
 					See more cocktails with:
 					{cocktail.strIngredient1 && (
 						<IngredientLink ingredient={cocktail.strIngredient1} />

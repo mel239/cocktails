@@ -3,7 +3,7 @@ import { Link } from '@chakra-ui/react';
 import { useLocation } from 'wouter';
 
 export default function IngredientLink({ ingredient }) {
-	const [location, pushLocation] = useLocation();
+	const [, pushLocation] = useLocation();
 
 	const searchIngredient = ingredient => {
 		pushLocation(`/cocktails/${ingredient}`);

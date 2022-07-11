@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa';
 
 export default function CocktailForm() {
 	const [cocktail, setCocktail] = useState([]);
-	const [location, pushLocation] = useLocation();
+	const [, pushLocation] = useLocation();
 
 	const handleSubmit = event => {
 		event.preventDefault();
