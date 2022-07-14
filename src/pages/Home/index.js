@@ -31,7 +31,7 @@ export default function Home() {
 						An easy guide to Cocktails
 					</Text>
 					<Stack
-						direcction={{ base: 'column', md: 'row' }}
+						// direcction={{ base: 'column', md: 'row' }}
 						pt={5}
 						spacing={3}
 						align={'center'}

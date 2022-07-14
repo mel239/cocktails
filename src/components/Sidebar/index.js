@@ -39,17 +39,17 @@ export default function Sidebar() {
 				finalFocusRef={btnRef}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerHeader >
-					<Flex justify="center">
-					<Image
-							onClick={onClose}
-							src={logo}
-							alt={'logo'}
-							cursor='pointer'
-						/>
-					</Flex>
+					<DrawerHeader>
+						<Flex justify='center'>
+							<Image
+								onClick={onClose}
+								src={logo}
+								alt={'logo'}
+								cursor='pointer'
+							/>
+						</Flex>
 					</DrawerHeader>
-				
+
 					<DrawerBody mt='1rem'>
 						<Flex direction='column' gap='1rem'>
 							<Link to={`/`}>
@@ -66,7 +66,7 @@ export default function Sidebar() {
 									rightIcon={<FaAngleDown />}>
 									Categories
 								</MenuButton>
-								<MenuList colorScheme='red'>
+								<MenuList>
 									<MenuItem onClick={onClose}>
 										<CocktailButton
 											children='category'
