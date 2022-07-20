@@ -9,11 +9,15 @@ import {
 	Image,
 	List,
 	ListItem,
+	Accordion,
+	AccordionItem,
+	AccordionButton,
+	AccordionIcon,
+	AccordionPanel,
 } from '@chakra-ui/react';
 
 import linedeco from 'assets/line-deco.png';
-
-
+import Fav from 'components/Fav';
 import IngredientLink from 'components/IngredientLink';
 
 export default function Cocktail({ cocktail }) {
@@ -53,56 +57,80 @@ export default function Cocktail({ cocktail }) {
 				</Stack>
 
 				<Flex justify='center'>
-					<Image src={linedeco} objectFit={'contain'}/>
+					<Image src={linedeco} objectFit={'contain'} w={{ md: '80%' }} />
 				</Flex>
+				<Fav />
 
-				<List align='left' p='0.5rem' borderBottom='1px'>
-					{cocktail.strIngredient1 && (
-						<ListItem>
-							▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
-						</ListItem>
-					)}
-					{cocktail.strIngredient2 && (
-						<ListItem>
-							▪ {cocktail.strMeasure2} {cocktail.strIngredient2}
-						</ListItem>
-					)}
-					{cocktail.strIngredient3 && (
-						<ListItem>
-							▪ {cocktail.strMeasure3} {cocktail.strIngredient3}
-						</ListItem>
-					)}
-					{cocktail.strIngredient4 && (
-						<ListItem>
-							▪ {cocktail.strMeasure4} {cocktail.strIngredient4}
-						</ListItem>
-					)}
-					{cocktail.strIngredient5 && (
-						<ListItem>
-							▪ {cocktail.strMeasure1} {cocktail.strIngredient5}
-						</ListItem>
-					)}
-					{cocktail.strIngredient6 && (
-						<ListItem>
-							▪ {cocktail.strMeasure6} {cocktail.strIngredient6}
-						</ListItem>
-					)}
-					{cocktail.strIngredient7 && (
-						<ListItem>
-							▪ {cocktail.strMeasure7} {cocktail.strIngredient7}
-						</ListItem>
-					)}
-					{cocktail.strIngredient8 && (
-						<ListItem>
-							▪ {cocktail.strMeasure8} {cocktail.strIngredient8}
-						</ListItem>
-					)}
-				</List>
-				
-				<Text align='center' p='0.5rem' borderBottom='1px'>{cocktail.strInstructions}</Text>
-			
-				<Flex wrap='wrap' align='center' justify='center' mt='0.5rem'>
-					See more cocktails with:
+				{/*Accordion*/}
+
+				<Accordion allowMultiple>
+					<AccordionItem>
+						<AccordionButton>
+							<h3>Ingredients</h3>
+							<AccordionIcon />
+						</AccordionButton>
+						<AccordionPanel>
+							<List align='left'>
+								{cocktail.strIngredient1 && (
+									<ListItem>
+										▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
+									</ListItem>
+								)}
+								{cocktail.strIngredient2 && (
+									<ListItem>
+										▪ {cocktail.strMeasure2} {cocktail.strIngredient2}
+									</ListItem>
+								)}
+								{cocktail.strIngredient3 && (
+									<ListItem>
+										▪ {cocktail.strMeasure3} {cocktail.strIngredient3}
+									</ListItem>
+								)}
+								{cocktail.strIngredient4 && (
+									<ListItem>
+										▪ {cocktail.strMeasure4} {cocktail.strIngredient4}
+									</ListItem>
+								)}
+								{cocktail.strIngredient5 && (
+									<ListItem>
+										▪ {cocktail.strMeasure1} {cocktail.strIngredient5}
+									</ListItem>
+								)}
+								{cocktail.strIngredient6 && (
+									<ListItem>
+										▪ {cocktail.strMeasure6} {cocktail.strIngredient6}
+									</ListItem>
+								)}
+								{cocktail.strIngredient7 && (
+									<ListItem>
+										▪ {cocktail.strMeasure7} {cocktail.strIngredient7}
+									</ListItem>
+								)}
+								{cocktail.strIngredient8 && (
+									<ListItem>
+										▪ {cocktail.strMeasure8} {cocktail.strIngredient8}
+									</ListItem>
+								)}
+							</List>
+						</AccordionPanel>
+					</AccordionItem>
+
+					<AccordionItem>
+						<AccordionButton>
+							<h3>Instructions</h3>
+							<AccordionIcon />
+						</AccordionButton>
+						<AccordionPanel>
+							<Text align='center'>
+								{cocktail.strInstructions}
+							</Text>
+						</AccordionPanel>
+					</AccordionItem>
+				</Accordion>
+
+				<Flex wrap='wrap' align='center' justify='center' mt='1rem'>
+					<h3>See more cocktails with:</h3>
+					
 					{cocktail.strIngredient1 && (
 						<IngredientLink ingredient={cocktail.strIngredient1} />
 					)}
