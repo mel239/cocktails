@@ -1,6 +1,7 @@
 import React from 'react';
 import {
 	Center,
+	Box,
 	useColorModeValue,
 	Heading,
 	Text,
@@ -59,18 +60,23 @@ export default function Cocktail({ cocktail }) {
 				<Flex justify='center'>
 					<Image src={linedeco} objectFit={'contain'} w={{ md: '80%' }} />
 				</Flex>
-				<Fav />
+				<Fav id={cocktail.idDrink} />
 
 				{/*Accordion*/}
 
-				<Accordion allowMultiple>
+				<Box w='80%'>
+				<Accordion allowMultiple size='xl'>
 					<AccordionItem>
+						<h3>
 						<AccordionButton>
-							<h3>Ingredients</h3>
+							<Box flex='1' textAlign='left'>
+								Ingredients
+							</Box>
 							<AccordionIcon />
 						</AccordionButton>
-						<AccordionPanel>
-							<List align='left'>
+						</h3>
+						<AccordionPanel pb={4}>
+							<List>
 								{cocktail.strIngredient1 && (
 									<ListItem>
 										▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
@@ -116,21 +122,24 @@ export default function Cocktail({ cocktail }) {
 					</AccordionItem>
 
 					<AccordionItem>
-						<AccordionButton>
-							<h3>Instructions</h3>
-							<AccordionIcon />
-						</AccordionButton>
-						<AccordionPanel>
-							<Text align='center'>
-								{cocktail.strInstructions}
-							</Text>
+						<h3>
+							<AccordionButton>
+								<Box flex='1' textAlign='left'>
+									Instructions
+								</Box>
+								<AccordionIcon />
+							</AccordionButton>
+						</h3>
+						<AccordionPanel pb={4}>
+							<Text>{cocktail.strInstructions}</Text>
 						</AccordionPanel>
 					</AccordionItem>
 				</Accordion>
+				</Box>
 
 				<Flex wrap='wrap' align='center' justify='center' mt='1rem'>
 					<h3>See more cocktails with:</h3>
-					
+
 					{cocktail.strIngredient1 && (
 						<IngredientLink ingredient={cocktail.strIngredient1} />
 					)}

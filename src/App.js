@@ -11,7 +11,7 @@ import CocktailCategory from 'pages/CocktailCategory';
 import ErrorPage from 'pages/ErrorPage';
 import Home from 'pages/Home';
 
-const clientId = '778372396209-cngittpvt6vgeahqlk40n25h570fho7j.apps.googleusercontent.com';
+import  {clientId} from 'services/config'
 
 function App() {
 
