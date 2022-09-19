@@ -28,7 +28,7 @@ export default function Login() {
 			{user ? (
 				<Flex>
 					<img
-						style={{ width: '40px', borderRadius: '50%' }}
+						style={{ width: '50px', borderRadius: '50%' }}
 						src={user.picture}
 						alt='profile'
 						referrerPolicy='no-referrer'

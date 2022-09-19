@@ -65,76 +65,76 @@ export default function Cocktail({ cocktail }) {
 				{/*Accordion*/}
 
 				<Box w='80%'>
-				<Accordion allowMultiple size='xl'>
-					<AccordionItem>
-						<h3>
-						<AccordionButton>
-							<Box flex='1' textAlign='left'>
-								Ingredients
-							</Box>
-							<AccordionIcon />
-						</AccordionButton>
-						</h3>
-						<AccordionPanel pb={4}>
-							<List>
-								{cocktail.strIngredient1 && (
-									<ListItem>
-										▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
-									</ListItem>
-								)}
-								{cocktail.strIngredient2 && (
-									<ListItem>
-										▪ {cocktail.strMeasure2} {cocktail.strIngredient2}
-									</ListItem>
-								)}
-								{cocktail.strIngredient3 && (
-									<ListItem>
-										▪ {cocktail.strMeasure3} {cocktail.strIngredient3}
-									</ListItem>
-								)}
-								{cocktail.strIngredient4 && (
-									<ListItem>
-										▪ {cocktail.strMeasure4} {cocktail.strIngredient4}
-									</ListItem>
-								)}
-								{cocktail.strIngredient5 && (
-									<ListItem>
-										▪ {cocktail.strMeasure1} {cocktail.strIngredient5}
-									</ListItem>
-								)}
-								{cocktail.strIngredient6 && (
-									<ListItem>
-										▪ {cocktail.strMeasure6} {cocktail.strIngredient6}
-									</ListItem>
-								)}
-								{cocktail.strIngredient7 && (
-									<ListItem>
-										▪ {cocktail.strMeasure7} {cocktail.strIngredient7}
-									</ListItem>
-								)}
-								{cocktail.strIngredient8 && (
-									<ListItem>
-										▪ {cocktail.strMeasure8} {cocktail.strIngredient8}
-									</ListItem>
-								)}
-							</List>
-						</AccordionPanel>
-					</AccordionItem>
+					<Accordion allowMultiple size='xl'>
+						<AccordionItem>
+							<h3>
+								<AccordionButton>
+									<Box flex='1' textAlign='left'>
+										Ingredients
+									</Box>
+									<AccordionIcon />
+								</AccordionButton>
+							</h3>
+							<AccordionPanel pb={4}>
+								<List>
+									{cocktail.strIngredient1 && (
+										<ListItem>
+											▪ {cocktail.strMeasure1} {cocktail.strIngredient1}
+										</ListItem>
+									)}
+									{cocktail.strIngredient2 && (
+										<ListItem>
+											▪ {cocktail.strMeasure2} {cocktail.strIngredient2}
+										</ListItem>
+									)}
+									{cocktail.strIngredient3 && (
+										<ListItem>
+											▪ {cocktail.strMeasure3} {cocktail.strIngredient3}
+										</ListItem>
+									)}
+									{cocktail.strIngredient4 && (
+										<ListItem>
+											▪ {cocktail.strMeasure4} {cocktail.strIngredient4}
+										</ListItem>
+									)}
+									{cocktail.strIngredient5 && (
+										<ListItem>
+											▪ {cocktail.strMeasure1} {cocktail.strIngredient5}
+										</ListItem>
+									)}
+									{cocktail.strIngredient6 && (
+										<ListItem>
+											▪ {cocktail.strMeasure6} {cocktail.strIngredient6}
+										</ListItem>
+									)}
+									{cocktail.strIngredient7 && (
+										<ListItem>
+											▪ {cocktail.strMeasure7} {cocktail.strIngredient7}
+										</ListItem>
+									)}
+									{cocktail.strIngredient8 && (
+										<ListItem>
+											▪ {cocktail.strMeasure8} {cocktail.strIngredient8}
+										</ListItem>
+									)}
+								</List>
+							</AccordionPanel>
+						</AccordionItem>
 
-					<AccordionItem>
-						<h3>
-							<AccordionButton>
-								<Box flex='1' textAlign='left'>
-									Instructions
-								</Box>
-								<AccordionIcon />
-							</AccordionButton>
-						</h3>
-						<AccordionPanel pb={4}>
-							<Text>{cocktail.strInstructions}</Text>
-						</AccordionPanel>
-					</AccordionItem>
-				</Accordion>
+						<AccordionItem>
+							<h3>
+								<AccordionButton>
+									<Box flex='1' textAlign='left'>
+										Instructions
+									</Box>
+									<AccordionIcon />
+								</AccordionButton>
+							</h3>
+							<AccordionPanel pb={4}>
+								<Text>{cocktail.strInstructions}</Text>
+							</AccordionPanel>
+						</AccordionItem>
+					</Accordion>
 				</Box>
 
 				<Flex wrap='wrap' align='center' justify='center' mt='1rem'>
