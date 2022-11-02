@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
-import { Flex,Button } from '@chakra-ui/react';
+import { Flex, Button, Text } from '@chakra-ui/react';
 
 import { useLocalStorage } from 'hooks/useLocalStorage';
 
@@ -10,7 +10,6 @@ export default function Login() {
 
 	const onSuccess = googleData => {
 		var userObj = jwt_decode(googleData.credential);
-		console.log(userObj);
 		setUser(userObj);
 	};
 
@@ -26,19 +25,20 @@ export default function Login() {
 	return (
 		<div>
 			{user ? (
-				<Flex>
+				<Flex direction='row'>
 					<img
 						style={{ width: '50px', borderRadius: '50%' }}
 						src={user.picture}
 						alt='profile'
 						referrerPolicy='no-referrer'
 					/>
-					<ul>
-						<li>{user.name}</li>
-						<li>
-							<Button onClick={handleLogout} size='sm' colorScheme='red'>Log out</Button>
-						</li>
-					</ul>
+					<Flex direction='column' pl={5}>
+						<Text fontSize='md'>{user.name}</Text>
+
+						<Button onClick={handleLogout} size='sm' colorScheme='red'>
+							Log out
+						</Button>
+					</Flex>
 				</Flex>
 			) : (
 				<GoogleLogin onSuccess={onSuccess} onError={onError} />

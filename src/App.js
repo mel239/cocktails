@@ -4,6 +4,7 @@ import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import Cocktails from 'pages/Cocktails';
 import CocktailDetails from 'pages/CocktailDetails';
 import CocktailSearch from 'pages/CocktailSearch';
@@ -11,10 +12,9 @@ import CocktailCategory from 'pages/CocktailCategory';
 import ErrorPage from 'pages/ErrorPage';
 import Home from 'pages/Home';
 
-import  {clientId} from 'services/config'
+import { clientId } from 'services/config';
 
 function App() {
-
 	return (
 		<ChakraProvider>
 			<GoogleOAuthProvider clientId={clientId}>
@@ -28,6 +28,7 @@ function App() {
 					<Route component={CocktailDetails} path='/cocktail/:id' />
 					<Route component={ErrorPage} path='/:rest*' />
 				</Switch>
+				<Footer />
 			</GoogleOAuthProvider>
 		</ChakraProvider>
 	);

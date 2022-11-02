@@ -1,21 +1,22 @@
-
 @font-face {
 	font-family: 'FlagoriaCalinthaExtraBold';
-	src: local(FlagoriaCalinthaExtraBold),url(fonts/FlagoriaCalintha-ExtraBold.ttf) format('truetype');
+	src: local(FlagoriaCalinthaExtraBold),
+		url(fonts/FlagoriaCalintha-ExtraBold.ttf) format('truetype');
 }
-
-h1{
+p {
+	font-family: 'Helvetica';
+}
+h1,
+h2 {
 	font-family: FlagoriaCalinthaExtraBold !important;
-	letter-spacing: 0.25rem;
+	letter-spacing: 0.15rem;
 }
-
-h3{
-	letter-spacing: 0.10rem;
+h3 {
 	font-family: FlagoriaCalinthaExtraBold !important;
 }
 
 .bg-animation {
-	background: linear-gradient(110deg, #f77d44,#f62a13,#ffc400);
+	background: linear-gradient(110deg, #f77d44, #f62a13, #ffc400);
 	background-size: 500% 500%;
 	animation: gradient 5s ease infinite;
 	background-clip: text;
@@ -34,4 +35,3 @@ h3{
 		background-position: 0% 50%;
 	}
 }
-

@@ -12,6 +12,7 @@ export default function CocktailForm() {
 		if (cocktail !== '') {
 			pushLocation(`/search/${cocktail}`);
 		}
+		setCocktail('');
 	};
 	const handleChange = event => {
 		setCocktail(event.target.value);
@@ -27,12 +28,14 @@ export default function CocktailForm() {
 					/>
 					<Input
 						onChange={handleChange}
+						size='md'
 						type='text'
 						value={cocktail}
 						isInvalid
 						focusBorderColor='#d51e0b'
 						width='100%'
-						placeholder='Search cocktail'
+						autoComplete='on'
+						placeholder='Search cocktail . . .'
 					/>
 				</InputGroup>
 			</form>
